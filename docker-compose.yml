@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+    environment:
+      # Variables to connect to our Postgres server
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: vin_service_dev
+      PGPORT: 5432
+      # Hostname of our Postgres container
+      PGHOST: db
+    depends_on:
+      - db
+  db:
+    image: "postgres:9.6.3"
+    ports:
+      - "5432:5432"
+    environment:
+      # Set user/password for Postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      # Set a path where Postgres should store the data
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - pgdata:/var/lib/postgresql/data/pgdata
+      
+volumes:
+  pgdata:
