@@ -1,6 +1,6 @@
 # VinService
 
-Uses the NHTSA API to decode VINs, caches the responses in a postgres database for quicker responses id that same VIN is requested again.
+Uses the NHTSA API to decode VINs, caches the responses in a postgres database for quicker responses if that same VIN is requested again.
 
 To start your Phoenix server:
 
