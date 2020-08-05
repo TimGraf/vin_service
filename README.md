@@ -4,6 +4,10 @@ Uses the NHTSA API to decode VINs, caches the responses in a postgres database f
 
 Service also translates the MHTSA vin repsonse into a more user freindly Vehilce representation.
 
+A random valid VIN can be generated via this site.
+
+[Random VIN](https://randomvin.com/)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
