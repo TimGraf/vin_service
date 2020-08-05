@@ -2,6 +2,8 @@
 
 Uses the NHTSA API to decode VINs, caches the responses in a postgres database for quicker responses if that same VIN is requested again.
 
+Service also translates the MHTSA vin repsonse into a more user freindly Vehilce representation.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
